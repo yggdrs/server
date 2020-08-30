@@ -13,7 +13,7 @@ export class MapRoom extends Room<MapState> {
     this.setState(new MapState())
     this.setSimulationInterval((deltaTime) =>
       this.dispatcher.dispatch(new ServerTickCommand(), { deltaTime }))
-    this.onMessage('action', (client, data) => {
+    this.onMessage('action', (client, data) => { sfdsfdsfs
       // this.dispatcher.dispatch(new ActionCommand(), { client, data })
     })
   }
