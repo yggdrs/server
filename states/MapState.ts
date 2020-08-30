@@ -1,6 +1,17 @@
-import {Schema, type} from '@colyseus/schema';
+import { Schema, ArraySchema, type } from '@colyseus/schema';
+
+export class Player extends Schema {
+    @type('string')
+    id: number
+
+    @type('number')
+    x: number
+
+    @type('number')
+    y: number
+}
 
 export class MapState extends Schema {
-    @type('string')
-    str: String
+    @type([Player])
+    players = new ArraySchema<Player>()
 }
